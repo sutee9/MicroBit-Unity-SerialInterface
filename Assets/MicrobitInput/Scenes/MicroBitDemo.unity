@@ -934,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4526437820045955741, guid: 738b06590d2aa47bf9239690a25eeb50, type: 3}
       propertyPath: portName
-      value: /dev/cu.usbmodem102
+      value: /dev/cu.usbmodem1102
       objectReference: {fileID: 0}
     - target: {fileID: 7862550170852242203, guid: 738b06590d2aa47bf9239690a25eeb50, type: 3}
       propertyPath: m_Name
