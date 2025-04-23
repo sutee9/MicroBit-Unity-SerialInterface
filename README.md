@@ -77,11 +77,13 @@ Open the menu *Edit > Project Settings*. In the *Project Settings*, choose Playe
 This project includes a scene demonstrating most features included in the Micro:Bit-Unity Serial Interface. Open the scene at ```Assets/MicroBitInput/Scenes/MicroBitDemo```. 
 Follow the steps under *Configuration* above to connect the MicroBit to this scene. You should see temperature readings, rotation, volume, buttons and the compass. You may use the included components as starting points for your own developments
 
-# Potential new Features
+# Roadmap
 
-These features are a non-prioritized list of potential additions to this package:
+Many more features are possible with the Micro:Bit library. These features are a non-prioritized list of potential additions to this package:
 * Recognizing Input on Pin0, Pin1, Pin2
 * Auto-Detecting the port of the Micro:Bit
 * Recognizing shaking, steps, etc from the gyroscope
 * Output, i.e. sending LED signals to the Microbit, or sending input/output to the Pins
 * Sending an audio signal to unity for recording voice
+* Enabling functionality even when using the .NET 2.1 compatibility level.
+* Wireless connectons
