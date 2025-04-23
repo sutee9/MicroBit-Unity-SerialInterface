@@ -10,7 +10,7 @@ To use the Micro:Bit-Unity Serial Interface, you must install the code on the Mi
 
 ## Installing the Code on Micro:Bit
 
-1) Download the .hex file from [0-PackagedVersions/microbit-UnityMicrobitController.hex](../MicroBit-Unity-SerialInterface/master/0-PackagedVersions/microbit-UnityMicrobitController.hex)
+1) Download the file microbit-UnityMicrobitController.hex from [0-Packaged Versions](https://github.com/sutee9/MicroBit-Unity-SerialInterface/blob/master/0-PackagedVersions/)
 2) Connect your micro:bit to your computer with a USB cable
 3) Open Finder (Mac) / File explorer (Windows) and notice that your micro:bit is listed like a USB drive called MICROBIT.
 4) Find the downloaded program hex file (e.g. in your local downloads folder) and drag and drop this on to the MICROBIT drive.
