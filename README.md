@@ -8,7 +8,7 @@ The Micro:Bit-Unity Serial Interface only supports *wired* connections. A setup 
 
 This project was developed und tested on Unity 6, version 6000.0.39f1. It may also run on later versions, no guarantee however.
 
-# Installation, Configuration and Usage
+# Installation & Configuration
 
 To use the Micro:Bit-Unity Serial Interface, you must install the code on the Micro:Bit, and then prepare your Unity project to receive the signals from the Micro:Bit. 
 
@@ -59,6 +59,29 @@ Before Micro:Bit-Unity Serial Interface can receive signals from the Micro:Bit y
 
 3)  In Unity, add the Prefab *MicroBitInput* which is located in *Assets/MicroBitInput/Prefabs* to your scene.
 4)  On the GameObject you just added, you will find the SerialReader component. Paste the name you previously determined into the field *Port Name*.
-5)  Test the connection: Check the "Log" property and press Play on your project. You should be seeing 
+5)  Test the connection: The component *Micro Bit (Script)* on the GameObject MicroBitInput should show fluctuating numbers in the section *Raw Input Visualization*. Press the Buttons on the MicroBit and check if the checkmarks are working.
 
-**Troubleshooting:**
+## Troubleshooting:
+
+**The error "FormatException: Input string was not in a correct format." is shown in Unity**
+
+This most likely happens if the serial port is in use in another program. For example, if you are programming for Micro:Bit using makecode.microbit.org, or using some other development environment. Close any development tools for Micro:Bit, to ensure that all messages the Micro:Bit sends are received by Unity.
+
+**Assets/MicrobitInput/Scripts/SerialReader.cs(2,17): error CS0234: The type or namespace name 'Ports' does not exist in the namespace 'System.IO' (are you missing an assembly reference?)**
+
+This error appears if you have not set the Api Compatibility Level correctly. By default, Unity 6 uses .NET 2.1 Standard, but this version of .NET does not include serial port access.
+Open the menu *Edit > Project Settings*. In the *Project Settings*, choose Player > Other Settings. Set the *Api Compatibility Level* to *.NET Framework*. If you are using an older Unity Version (version 2022 or older), you may set it to .NET 2.0 instead. 
+
+# Demo Scene
+
+This project includes a scene demonstrating most features included in the Micro:Bit-Unity Serial Interface. Open the scene at ```Assets/MicroBitInput/Scenes/MicroBitDemo```. 
+Follow the steps under *Configuration* above to connect the MicroBit to this scene. You should see temperature readings, rotation, volume, buttons and the compass. You may use the included components as starting points for your own developments
+
+# Potential new Features
+
+These features are a non-prioritized list of potential additions to this package:
+* Recognizing Input on Pin0, Pin1, Pin2
+* Auto-Detecting the port of the Micro:Bit
+* Recognizing shaking, steps, etc from the gyroscope
+* Output, i.e. sending LED signals to the Microbit, or sending input/output to the Pins
+* Sending an audio signal to unity for recording voice
